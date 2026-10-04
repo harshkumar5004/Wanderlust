@@ -99,13 +99,6 @@ app.post("/listing", async (req, res) => {
 
     const listing = new Listing(req.body.listing);
 
-    if (req.body.listing.image && req.body.listing.image.url) {
-        listing.image = {
-            filename: "listingimage",
-            url: req.body.listing.image.url
-        };
-    }
-
     await listing.save();
 
     res.redirect("/listing");

@@ -1,0 +1,23 @@
+<% layout("/layout/boilerplate") -%>
+<form action="/listings" method="POST" class="needs-validation" novalidate>
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input name="listing[title]" id="title" type="text" class="form-control" required>
+    <div class="invalid-feedback">Please enter a title</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea name="listing[description]" id="description" class="form-control" required></textarea>
+    <div class="invalid-feedback">Please enter a description</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="price" class="form-label">Price</label>
+    <input name="listing[price]" id="price" type="number" class="form-control" required>
+    <div class="invalid-feedback">Please enter a price</div>
+  </div>
+
+  <button class="btn btn-dark">Add</button>
+</form>

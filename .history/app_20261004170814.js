@@ -93,18 +93,13 @@ app.get("/listing/:id", async (req, res) => {
 // Create Route
 // =======================
 app.post("/listing", async (req, res) => {
-
     console.log("FORM DATA:");
     console.log(req.body);
 
     const listing = new Listing(req.body.listing);
 
-    if (req.body.listing.image && req.body.listing.image.url) {
-        listing.image = {
-            filename: "listingimage",
-            url: req.body.listing.image.url
-        };
-    }
+    console.log("LISTING OBJECT:");
+    console.log(listing);
 
     await listing.save();
 

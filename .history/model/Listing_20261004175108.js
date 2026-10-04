@@ -6,12 +6,12 @@ const listingSchema = new Schema({
 
     title: {
         type: String,
-        
+        required: true
     },
 
     description: {
         type: String,
-        
+        required: true
     },
 
     image: {
@@ -27,7 +27,7 @@ const listingSchema = new Schema({
 
     price: {
         type: Number,
-       
+        required: true
     },
 
     location: {

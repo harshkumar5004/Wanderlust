@@ -2,6 +2,7 @@
 
 <h3>Edit Listing</h3>
 
+<!-- Update Form -->
 <form
     method="POST"
     action="/listing/<%= listing._id %>?_method=PUT"
@@ -21,6 +22,7 @@
         >
     </div>
 
+
     <!-- Description -->
     <div class="mb-3">
         <label for="description" class="form-label">
@@ -35,6 +37,7 @@
             rows="4"
         ><%= listing.description %></textarea>
     </div>
+
 
     <!-- Image URL -->
     <div class="mb-3">
@@ -51,6 +54,7 @@
             class="form-control"
         >
     </div>
+
 
     <!-- Price + Location + Country -->
     <div class="row">
@@ -71,6 +75,7 @@
             >
         </div>
 
+
         <!-- Location -->
         <div class="mb-3 col-md-4">
             <label for="location" class="form-label">
@@ -86,6 +91,7 @@
                 class="form-control"
             >
         </div>
+
 
         <!-- Country -->
         <div class="mb-3 col-md-4">
@@ -105,9 +111,24 @@
 
     </div>
 
-    <!-- Update -->
+
+    <!-- Update Button -->
     <button type="submit" class="btn btn-dark">
-        Update
+        Update Listing
+    </button>
+
+</form>
+
+
+<!-- Delete Form -->
+<form
+    method="POST"
+    action="/listing/<%= listing._id %>?_method=DELETE"
+    class="mt-3"
+>
+
+    <button type="submit" class="btn btn-danger">
+        Delete Listing
     </button>
 
 </form>

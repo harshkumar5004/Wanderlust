@@ -13,13 +13,13 @@
 
         <input
             type="text"
-            id="title"
             name="listing[title]"
             value="<%= listing.title %>"
             placeholder="Enter title"
             class="form-control"
         >
     </div>
+
 
     <!-- Description -->
     <div class="mb-3">
@@ -28,13 +28,13 @@
         </label>
 
         <textarea
-            id="description"
             name="listing[description]"
             placeholder="Enter description"
             class="form-control"
             rows="4"
         ><%= listing.description %></textarea>
     </div>
+
 
     <!-- Image URL -->
     <div class="mb-3">
@@ -44,13 +44,13 @@
 
         <input
             type="text"
-            id="image"
-            name="listing[image][url]"
-            value="<%= listing.image?.url || '' %>"
+            name="listing[image]"
+            value="<%= listing.image.url %>"
             placeholder="Enter image URL"
             class="form-control"
         >
     </div>
+
 
     <!-- Price + Location + Country -->
     <div class="row">
@@ -63,13 +63,13 @@
 
             <input
                 type="number"
-                id="price"
                 name="listing[price]"
                 value="<%= listing.price %>"
                 placeholder="Enter price"
                 class="form-control"
             >
         </div>
+
 
         <!-- Location -->
         <div class="mb-3 col-md-4">
@@ -79,13 +79,13 @@
 
             <input
                 type="text"
-                id="location"
                 name="listing[location]"
                 value="<%= listing.location %>"
                 placeholder="Enter location"
                 class="form-control"
             >
         </div>
+
 
         <!-- Country -->
         <div class="mb-3 col-md-4">
@@ -95,7 +95,6 @@
 
             <input
                 type="text"
-                id="country"
                 name="listing[country]"
                 value="<%= listing.country %>"
                 placeholder="Enter country"
@@ -105,9 +104,10 @@
 
     </div>
 
-    <!-- Update -->
+
+    <!-- Submit button -->
     <button type="submit" class="btn btn-dark">
-        Update
+        Update 
     </button>
 
 </form>
