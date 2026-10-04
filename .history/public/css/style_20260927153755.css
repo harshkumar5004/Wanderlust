@@ -1,0 +1,22 @@
+/* body {
+    background-color:aquamarine;
+} */
+
+
+.navbar {
+    height: 5rem;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.navbar-nav{
+    color: black !important;
+    
+
+}
+
+.f-info-link  {
+    text-decoration: none;
+    color: #22222222;
+}

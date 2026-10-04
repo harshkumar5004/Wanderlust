@@ -1,0 +1,31 @@
+<% layout("/layout/boilerplate") -%>
+
+<% for (let listing of allListing) { %>
+
+<div class="card" style="width: 18rem;">
+
+    <img
+        src="<%= listing.image.url %>"
+        class="card-img-top"
+        alt="listing_image"
+    >
+
+    <div class="card-body">
+
+        <h5 class="card-title">
+            <%= listing.title %>
+        </h5>
+
+        <p class="card-text">
+            <%= listing.title %>
+        </p>
+
+        <a href="/listing/<%= listing._id %>" class="btn btn-primary">
+            Go somewhere
+        </a>
+
+    </div>
+
+</div>
+
+<% } %>
