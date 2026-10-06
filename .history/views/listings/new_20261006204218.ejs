@@ -1,4 +1,4 @@
-
+```ejs
 <% layout("/layout/boilerplate") -%>
 
 <h3>Edit Listing</h3>
@@ -7,7 +7,6 @@
     method="POST"
     action="/listing/<%= listing._id %>?_method=PUT"
     class="needs-validation"
- class="needs-validation"
     novalidate
 >
     <!-- Title -->
@@ -58,7 +57,7 @@
             placeholder="Enter image URL"
             class="form-control"
         >
-       
+        
     </div>
 
     <!-- Price -->
@@ -119,7 +118,7 @@
 
     <!-- Update -->
     <button type="submit" class="btn btn-dark">
-        edit
+        Update Listing
     </button>
 </form>
-
+```
